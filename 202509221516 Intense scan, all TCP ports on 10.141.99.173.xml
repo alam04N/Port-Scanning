@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -p 1-65535 -T4 -A -v 10.141.99.173" profile_name="Intense scan, all TCP ports" scanner="nmap" start="1758534404" startstr="Mon Sep 22 15:16:44 2025" version="7.94" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.94 ( https://nmap.org ) at 2025-09-22 15:16 India Standard Time
+NSE: Loaded 156 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 15:16
+Completed NSE at 15:16, 0.00s elapsed
+Initiating NSE at 15:16
+Completed NSE at 15:16, 0.00s elapsed
+Initiating NSE at 15:16
+Completed NSE at 15:16, 0.00s elapsed
+Initiating Parallel DNS resolution of 1 host. at 15:16
+Completed Parallel DNS resolution of 1 host. at 15:16, 0.01s elapsed
+Initiating SYN Stealth Scan at 15:16
+Scanning 10.141.99.173 [65535 ports]
+Discovered open port 139/tcp on 10.141.99.173
+Discovered open port 3306/tcp on 10.141.99.173
+Discovered open port 445/tcp on 10.141.99.173
+Discovered open port 135/tcp on 10.141.99.173
+Discovered open port 49665/tcp on 10.141.99.173
+Discovered open port 49676/tcp on 10.141.99.173
+Discovered open port 49667/tcp on 10.141.99.173
+Discovered open port 49666/tcp on 10.141.99.173
+Discovered open port 49668/tcp on 10.141.99.173
+Discovered open port 5040/tcp on 10.141.99.173
+Discovered open port 7680/tcp on 10.141.99.173
+Discovered open port 33060/tcp on 10.141.99.173
+Discovered open port 49664/tcp on 10.141.99.173
+Discovered open port 5433/tcp on 10.141.99.173
+Discovered open port 5500/tcp on 10.141.99.173
+Completed SYN Stealth Scan at 15:16, 5.01s elapsed (65535 total ports)
+Initiating Service scan at 15:16
+Scanning 15 services on 10.141.99.173
+Service scan Timing: About 53.33% done; ETC: 15:18 (0:00:36 remaining)
+Completed Service scan at 15:18, 83.62s elapsed (15 services on 1 host)
+Initiating OS detection (try #1) against 10.141.99.173
+Retrying OS detection (try #2) against 10.141.99.173
+Retrying OS detection (try #3) against 10.141.99.173
+Retrying OS detection (try #4) against 10.141.99.173
+Retrying OS detection (try #5) against 10.141.99.173
+NSE: Script scanning 10.141.99.173.
+Initiating NSE at 15:18
+Completed NSE at 15:18, 14.11s elapsed
+Initiating NSE at 15:18
+Completed NSE at 15:18, 0.18s elapsed
+Initiating NSE at 15:18
+Completed NSE at 15:18, 0.00s elapsed
+Nmap scan report for 10.141.99.173
+Host is up (0.00046s latency).
+Not shown: 65519 closed tcp ports (reset)
+PORT      STATE    SERVICE       VERSION
+135/tcp   open     msrpc         Microsoft Windows RPC
+137/tcp   filtered netbios-ns
+139/tcp   open     netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open     microsoft-ds?
+3306/tcp  open     mysql         MySQL (unauthorized)
+5040/tcp  open     unknown
+5433/tcp  open     postgresql    PostgreSQL DB 9.6.0 or later
+5500/tcp  open     hotline?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Vary: Origin
+|     Access-Control-Allow-Credentials: true
+|     X-Content-Type-Options: nosniff
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 11650
+|     Date: Mon, 22 Sep 2025 09:47:03 GMT
+|     Connection: close
+|     &lt;!DOCTYPE html&gt;
+|     &lt;html&gt;
+|     &lt;head&gt;
+|     &lt;meta charset='utf-8'&gt; 
+|     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /&gt;
+|     &lt;title&gt;listing directory /&lt;/title&gt;
+|     &lt;style&gt;* {
+|     margin: 0;
+|     padding: 0;
+|     outline: 0;
+|     body {
+|     padding: 80px 100px;
+|     font: 13px "Helvetica Neue", "Lucida Grande", "Arial";
+|     background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));
+|     background: #ECE9E9 -moz-linear-gradient(top, #fff, #ECE9E9);
+|     background-repeat: no-repeat;
+|     color: #555;
+|     -webkit-font-smoothing: antialiased;
+|     font-size: 22px;
+|     color: #343434;
+|     paddin
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 204 No Content
+|     Vary: Origin, Access-Control-Request-Headers
+|     Access-Control-Allow-Credentials: true
+|     Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+|     Content-Length: 0
+|     Date: Mon, 22 Sep 2025 09:47:03 GMT
+|     Connection: close
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|_    Connection: close
+7680/tcp  open     pando-pub?
+33060/tcp open     mysqlx?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, LDAPSearchReq, NotesRPC, SSLSessionReq, TLSSessionReq, X11Probe, afp: 
+|     Invalid message"
+|     HY000
+|   LDAPBindReq: 
+|     *Parse error unserializing protobuf message"
+|     HY000
+|   oracle-tns: 
+|     Invalid message-frame."
+|_    HY000
+49664/tcp open     msrpc         Microsoft Windows RPC
+49665/tcp open     msrpc         Microsoft Windows RPC
+49666/tcp open     msrpc         Microsoft Windows RPC
+49667/tcp open     msrpc         Microsoft Windows RPC
+49668/tcp open     msrpc         Microsoft Windows RPC
+49676/tcp open     msrpc         Microsoft Windows RPC
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5500-TCP:V=7.94%I=7%D=9/22%Time=68D11B17%P=i686-pc-windows-windows%
+SF:r(GetRequest,2E63,"HTTP/1\.1\x20200\x20OK\r\nVary:\x20Origin\r\nAccess-
+SF:Control-Allow-Credentials:\x20true\r\nX-Content-Type-Options:\x20nosnif
+SF:f\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x2
+SF:011650\r\nDate:\x20Mon,\x2022\x20Sep\x202025\x2009:47:03\x20GMT\r\nConn
+SF:ection:\x20close\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html&gt;\n\x20\x20&lt;head&gt;\n\x2
+SF:0\x20\x20\x20&lt;meta\x20charset='utf-8'&gt;\x20\n\x20\x20\x20\x20&lt;meta\x20na
+SF:me=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1\.0,
+SF:\x20maximum-scale=1\.0,\x20user-scalable=no\"\x20/&gt;\n\x20\x20\x20\x20&lt;t
+SF:itle&gt;listing\x20directory\x20/&lt;/title&gt;\n\x20\x20\x20\x20&lt;style&gt;\*\x20{\
+SF:n\x20\x20margin:\x200;\n\x20\x20padding:\x200;\n\x20\x20outline:\x200;\
+SF:n}\n\nbody\x20{\n\x20\x20padding:\x2080px\x20100px;\n\x20\x20font:\x201
+SF:3px\x20\"Helvetica\x20Neue\",\x20\"Lucida\x20Grande\",\x20\"Arial\";\n\
+SF:x20\x20background:\x20#ECE9E9\x20-webkit-gradient\(linear,\x200%\x200%,
+SF:\x200%\x20100%,\x20from\(#fff\),\x20to\(#ECE9E9\)\);\n\x20\x20backgroun
+SF:d:\x20#ECE9E9\x20-moz-linear-gradient\(top,\x20#fff,\x20#ECE9E9\);\n\x2
+SF:0\x20background-repeat:\x20no-repeat;\n\x20\x20color:\x20#555;\n\x20\x2
+SF:0-webkit-font-smoothing:\x20antialiased;\n}\nh1,\x20h2,\x20h3\x20{\n\x2
+SF:0\x20font-size:\x2022px;\n\x20\x20color:\x20#343434;\n}\nh1\x20em,\x20h
+SF:2\x20em\x20{\n\x20\x20paddin")%r(HTTPOptions,FA,"HTTP/1\.1\x20204\x20No
+SF:\x20Content\r\nVary:\x20Origin,\x20Access-Control-Request-Headers\r\nAc
+SF:cess-Control-Allow-Credentials:\x20true\r\nAccess-Control-Allow-Methods
+SF::\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nContent-Length:\x200\r\nDate:\x2
+SF:0Mon,\x2022\x20Sep\x202025\x2009:47:03\x20GMT\r\nConnection:\x20close\r
+SF:\n\r\n")%r(RTSPRequest,FA,"HTTP/1\.1\x20204\x20No\x20Content\r\nVary:\x
+SF:20Origin,\x20Access-Control-Request-Headers\r\nAccess-Control-Allow-Cre
+SF:dentials:\x20true\r\nAccess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATC
+SF:H,POST,DELETE\r\nContent-Length:\x200\r\nDate:\x20Mon,\x2022\x20Sep\x20
+SF:2025\x2009:47:03\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(RPCCheck,2F
+SF:,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port33060-TCP:V=7.94%I=7%D=9/22%Time=68D11B12%P=i686-pc-windows-windows
+SF:%r(NULL,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(GenericLines,9,"\x05\0\0\0\
+SF:x0b\x08\x05\x1a\0")%r(GetRequest,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(HT
+SF:TPOptions,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(RTSPRequest,9,"\x05\0\0\0
+SF:\x0b\x08\x05\x1a\0")%r(RPCCheck,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(DNS
+SF:VersionBindReqTCP,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(DNSStatusRequestT
+SF:CP,2B,"\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1a\
+SF:x0fInvalid\x20message\"\x05HY000")%r(Help,9,"\x05\0\0\0\x0b\x08\x05\x1a
+SF:\0")%r(SSLSessionReq,2B,"\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08
+SF:\x01\x10\x88'\x1a\x0fInvalid\x20message\"\x05HY000")%r(TerminalServerCo
+SF:okie,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(TLSSessionReq,2B,"\x05\0\0\0\x
+SF:0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1a\x0fInvalid\x20messa
+SF:ge\"\x05HY000")%r(Kerberos,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(SMBProgN
+SF:eg,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(X11Probe,2B,"\x05\0\0\0\x0b\x08\
+SF:x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1a\x0fInvalid\x20message\"\x0
+SF:5HY000")%r(FourOhFourRequest,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(LPDStr
+SF:ing,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(LDAPSearchReq,2B,"\x05\0\0\0\x0
+SF:b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x1a\x0fInvalid\x20messag
+SF:e\"\x05HY000")%r(LDAPBindReq,46,"\x05\0\0\0\x0b\x08\x05\x1a\x009\0\0\0\
+SF:x01\x08\x01\x10\x88'\x1a\*Parse\x20error\x20unserializing\x20protobuf\x
+SF:20message\"\x05HY000")%r(SIPOptions,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r
+SF:(LANDesk-RC,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(TerminalServer,9,"\x05\
+SF:0\0\0\x0b\x08\x05\x1a\0")%r(NCP,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(Not
+SF:esRPC,2B,"\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88'\x
+SF:1a\x0fInvalid\x20message\"\x05HY000")%r(JavaRMI,9,"\x05\0\0\0\x0b\x08\x
+SF:05\x1a\0")%r(WMSRequest,9,"\x05\0\0\0\x0b\x08\x05\x1a\0")%r(oracle-tns,
+SF:32,"\x05\0\0\0\x0b\x08\x05\x1a\0%\0\0\0\x01\x08\x01\x10\x88'\x1a\x16Inv
+SF:alid\x20message-frame\.\"\x05HY000")%r(ms-sql-s,9,"\x05\0\0\0\x0b\x08\x
+SF:05\x1a\0")%r(afp,2B,"\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01
+SF:\x10\x88'\x1a\x0fInvalid\x20message\"\x05HY000");
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94%E=4%D=9/22%OT=135%CT=1%CU=30952%PV=Y%DS=0%DC=L%G=Y%TM=68D11B
+OS:77%P=i686-pc-windows-windows)SEQ(SP=100%GCD=1%ISR=10F%TI=I%CI=I%II=I%SS=
+OS:S%TS=A)SEQ(SP=FF%GCD=1%ISR=10F%TI=I%CI=I%II=I%SS=S%TS=A)OPS(O1=MFFD7NW8S
+OS:T11%O2=MFFD7NW8ST11%O3=MFFD7NW8NNT11%O4=MFFD7NW8ST11%O5=MFFD7NW8ST11%O6=
+OS:MFFD7ST11)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FFFF)ECN(R=Y%DF
+OS:=Y%T=80%W=FFFF%O=MFFD7NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0
+OS:%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=80%W=0%S=
+OS:Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y
+OS:%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R
+OS:%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=
+OS:80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=Z%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80%CD=Z
+OS:)
+
+Uptime guess: 22.724 days (since Sat Aug 30 21:55:48 2025)
+Network Distance: 0 hops
+TCP Sequence Prediction: Difficulty=255 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2025-09-22T09:48:30
+|_  start_date: N/A
+
+NSE: Script Post-scanning.
+Initiating NSE at 15:18
+Completed NSE at 15:18, 0.03s elapsed
+Initiating NSE at 15:18
+Completed NSE at 15:18, 0.00s elapsed
+Initiating NSE at 15:18
+Completed NSE at 15:18, 0.00s elapsed
+Read data files from: C:\Program Files (x86)\Nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 115.26 seconds
+           Raw packets sent: 65616 (2.891MB) | Rcvd: 131285 (5.521MB)
+</output><host comment=""><status state="up"></status><address addr="10.141.99.173" vendor="" addrtype="ipv4"></address><hostnames></hostnames><ports><extraports count="65519" state="closed"></extraports><port portid="135" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="137" protocol="tcp"><state state="filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="netbios-ns"></service></port><port portid="139" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="netbios-ssn" product="Microsoft Windows netbios-ssn"></service></port><port portid="445" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="3" method="table" name="microsoft-ds"></service></port><port portid="3306" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="mysql" product="MySQL" extrainfo="unauthorized"></service></port><port portid="5040" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service></service></port><port portid="5433" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="postgresql" product="PostgreSQL DB" version="9.6.0 or later"></service></port><port portid="5500" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="3" method="table" name="hotline"></service></port><port portid="7680" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="3" method="table" name="pando-pub"></service></port><port portid="33060" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="3" method="table" name="mysqlx"></service></port><port portid="49664" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49665" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49666" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49667" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49668" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49676" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port></ports><os><portused state="open" proto="tcp" portid="135"></portused><portused state="closed" proto="tcp" portid="1"></portused><portused state="closed" proto="udp" portid="30952"></portused><osmatch name="Microsoft Windows 10 1607" accuracy="99" line="69748"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="10" accuracy="99"></osclass></osmatch><osmatch name="Microsoft Windows 11 21H2" accuracy="98" line="108196"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="11" accuracy="98"></osclass></osmatch><osmatch name="Microsoft Windows 10 1511" accuracy="97" line="69513"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="10" accuracy="97"></osclass></osmatch><osmatch name="Windows Server 2022" accuracy="97" line="108059"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="2022" accuracy="97"></osclass></osmatch><osmatch name="Microsoft Windows 10 1703" accuracy="96" line="69820"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="10" accuracy="96"></osclass></osmatch><osmatch name="Microsoft Windows 7 or 8.1 R1" accuracy="94" line="76929"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="8.1" accuracy="94"></osclass></osmatch><osmatch name="Microsoft Windows 10 1809 - 2004" accuracy="93" line="69954"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="10" accuracy="93"></osclass></osmatch><osmatch name="Microsoft Windows 7 SP1" accuracy="93" line="77655"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="7" accuracy="93"></osclass></osmatch><osmatch name="Microsoft Windows 10" accuracy="93" line="69322"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="10" accuracy="93"></osclass></osmatch><osmatch name="Microsoft Windows 10 10586 - 14393" accuracy="93" line="69416"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="10" accuracy="93"></osclass></osmatch></os><uptime seconds="1963371" lastboot="Sat Aug 30 21:55:48 2025"></uptime><tcpsequence index="255" difficulty="Good luck!" values="E54FEC67,AC7393A8,5FC4FE0E,F02A1C9B,8002819E,180D4472"></tcpsequence><ipidsequence class="Incremental" values="5DFC,5DFE,5E00,5E02,5E04,5E06"></ipidsequence><tcptssequence class="1000HZ" values="75067013,75067077,750670DD,75067143,750671A8,7506720C"></tcptssequence></host><runstats><finished time="1758534519" timestr="Mon Sep 22 15:18:39 2025"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>
